@@ -1,5 +1,7 @@
 # Wide Angle Parabolic Equation model with arbitrary Mach number
 
+![WAPE Screenshot](https://github.com/figures/image.png)
+
 The WAPE model proposed here is an implementation of the work of [Ostashev et al 2020]. The WAPE is developed using a Padé(1,1) series expansion. A Crank-Nicholson algorithm is used to reduce the equation into a matrix system. Then, the 2D acoustic pressure field is calculated using a second-order centered finite difference scheme on velocity potential.
 
 This code is intended to be shared with the research community.
@@ -27,7 +29,7 @@ Calculation time can be really long and take a lot of memory if:
 This code is released under the EUPL license.
 
 ## Credits
-The development of this code took part into the french [PIBE project](https://www.anr-pibe.com/).
+The development of this code took part into the french [PIBE project](https://www.anr-pibe.com/) (contract ANR-18-CE04-0011).
 
 ## Citing this work
 If this WAPE script contributes to an academic publication, please cite it as:
