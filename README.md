@@ -1,6 +1,6 @@
 # Wide Angle Parabolic Equation model with arbitrary Mach number
 
-![WAPE Screenshot](image.png)
+<img src="/image.png" width="700" />
 
 The WAPE model proposed here is an implementation of the work of [Ostashev et al 2020]. The WAPE is developed using a Padé(1,1) series expansion. A Crank-Nicholson algorithm is used to reduce the equation into a matrix system. Then, the 2D acoustic pressure field is calculated using a second-order centered finite difference scheme on velocity potential.
 
@@ -55,7 +55,12 @@ h = 0;         % thickness of ground surface layer (m), if h = 0 no layer
 ```
 
 ## Post-processing
-When the simulation has completed there will be 'DeltaL.mat' and  'normalized_SPL.mat' files which correspond respectively to attenuation to free field (dB) and sound pressure level field (dB) normalized by the maximum amplitude. You can post-process these signals to your liking. 
+When the simulation has completed there will be 'DeltaL.mat' and  'normalized_SPL.mat' files which correspond respectively to attenuation to free field (dB), and sound pressure level field (dB) which is normalized by the maximum amplitude. You can post-process these signals to your liking. Here is an exemple of output:
+
+<p float="left">
+  <img src="/SPL.eps" width="500" />
+  <img src="/DeltaL.eps" width="500" /> 
+</p>
 
 ## Warning
 Instabilities can occur with PE simulations if:
