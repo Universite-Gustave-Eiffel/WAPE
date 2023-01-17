@@ -12,6 +12,48 @@ This WAPE model is designed to run with [Matlab](https://www.mathworks.com/produ
 ## Run a calculation
 To run a calculation you need to open "initialisation_WAPE.m", set parameters values, and run the script. It is indicated which parameter can be modified and which can not.
 
+The input parameters are:
+
+```Matlab
+%% Source parameters
+freq = 100;  % source frequency (Hz)
+hS = 10;     % source height (m)
+
+%% Medium properties
+T = 10;      % atmospheric temperature at the surface (°C)
+Tlog = 0.2;  % temperature coefficient for the vertical gradient
+
+shear_exp = 0.15;    % wind shear exponents (scalar) for power law wind profil
+v_ref = 10;          % wind speed (m/s) measured at z_ref height, for power-law wind profile
+z_ref = 80;          % reference height for wind speed v_ref
+theta = 180;         % propagation angle with respect to the source (0° : downwind, 180° : upwind)
+
+f_turb_ind = true;   % logical 'true' or 'false' to account for turbulence or not
+gamT = 0;            % turbulence strength
+
+%% 2D Spatial domain (x,z)
+dim_x = 3000; % horizontal dimension x of the domain (m)
+dim_z = 300;  % vertical dimension z of the domain (m)
+
+haut_a = 0.8; % where the absorbing layer starts at the top of the domain, according to z axis (0.8 ==> start at 80% of z axis)
+coeff_a = 10; % damping rate
+
+discrx = 10;  % discretization x = lambda/discrx
+discrz = 10;  % discretization z = lambda/discrz
+
+z_r = 1.5;    % receiver height for plotting (m)
+
+%% Ground properties
+hv = 0;       % vegetation height (m), it affects the shape of atmospheric profils
+z0 = 0.13*hv + 0.00001;  % atmospheric roughness length (m), can't be null
+d = 0.66*hv;   % displacement height of flux profiles (m), it's directly linked to vegetation height
+
+lc = 0 ;       % correlation length (m) (ground roughness parameter), if 0 : no ground rugositiy, [0.05-1]
+sigmah = 0;    % standard deviation of roughness height (m) (ground roughness parameter), [0.01-0.05]
+sigma = 10000000;  % airflow resistivity of the ground (kN.s.m-4)
+h = 0;         % thickness of ground surface layer (m), if h = 0 no layer
+```
+
 ## Post-processing
 When the simulation has completed there will be 'DeltaL.mat' and  'normalized_SPL.mat' files which correspond respectively to attenuation to free field (dB) and sound pressure level field (dB) normalized by the maximum amplitude. You can post-process these signals to your liking. 
 
