@@ -16,17 +16,17 @@ The input parameters are:
 
 ```Matlab
 %% Source parameters
-freq = 100;  % source frequency (Hz)
-hS = 10;     % source height (m)
+freq = 250;  % source frequency (Hz)
+hS = 35;     % source height (m)
 
 %% Medium properties
 T = 10;      % atmospheric temperature at the surface (°C)
 Tlog = 0.2;  % temperature coefficient for the vertical gradient
 
 shear_exp = 0.15;    % wind shear exponents (scalar) for power law wind profil
-v_ref = 10;          % wind speed (m/s) measured at z_ref height, for power-law wind profile
+v_ref = 5;          % wind speed (m/s) measured at z_ref height, for power-law wind profile
 z_ref = 80;          % reference height for wind speed v_ref
-theta = 180;         % propagation angle with respect to the source (0° : downwind, 180° : upwind)
+theta = 0;         % propagation angle with respect to the source (0° : downwind, 180° : upwind)
 
 f_turb_ind = true;   % logical 'true' or 'false' to account for turbulence or not
 gamT = 0;            % turbulence strength
