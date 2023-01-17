@@ -57,10 +57,7 @@ h = 0;         % thickness of ground surface layer (m), if h = 0 no layer
 ## Post-processing
 When the simulation has completed there will be 'DeltaL.mat' and  'normalized_SPL.mat' files which correspond respectively to attenuation to free field (dB), and sound pressure level field (dB) which is normalized by the maximum amplitude. You can post-process these signals to your liking. Here is an exemple of output:
 
-<p float="left">
-  <img src="/SPL.eps" width="500" />
-  <img src="/DeltaL.eps" width="500" /> 
-</p>
+<img src="/SPL.eps" width="500" /> 
 
 ## Warning
 Instabilities can occur with PE simulations if:
