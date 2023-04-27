@@ -78,12 +78,13 @@ The development of this code took part into the french [PIBE project](https://ww
 ## Citing this work
 If this WAPE script contributes to an academic publication, please cite it as:
 
-      @misc{kayser_wape_2023,
-	      title = {{WAPE} model},
-	      url = {https://github.com/bkayser13/WAPE/},
-	      author = {Kayser, Bill},
-	      year = {2023},
-      }
+      @misc{kayser_wide_2023,
+	title = {Wide-angle parabolic equation model},
+	url = {https://github.com/bkayser13/WAPE/},
+	author = {Kayser, Bill},
+	year = {2023},
+	note = {https://github.com/bkayser13/WAPE/},
+	}
 
 ## Some background references
 
